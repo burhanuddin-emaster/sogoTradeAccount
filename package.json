@@ -1,7 +1,7 @@
 
 {
-  "name": "SoGoTrade",
-  "version": "1.0.4",
+  "name": "RNSogoTrade",
+  "version": "1.0.0",
   "description": "A react native wrapper for SoGoTrade Account",
   "main": "index.js",
   "repository" :{
