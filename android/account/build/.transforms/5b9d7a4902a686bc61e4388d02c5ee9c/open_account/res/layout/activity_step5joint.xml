@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/joint_address_main_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    tools:context="com.example.ui.open_account.Step5Joint">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_alignParentTop="true"
+        android:id="@+id/joint_applicant_toolbar_contact"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="?attr/colorPrimary"
+        app:elevation="@dimen/elevation_default"
+        app:layout_scrollFlags="enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <Button
+            android:id="@+id/btn_joint_address_back"
+            android:layout_width="60dp"
+            android:background="@color/transparent"
+            android:drawableStart="@drawable/arrowleft"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:text="@string/back"
+            android:drawableTint="@color/theme_accent"
+            android:textColor="@color/theme_accent"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:text="@string/joint_applicant"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/bpWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/joint_applicant_contant_next"
+            android:text="@string/uv_next"
+            android:textAllCaps="false"
+            android:layout_gravity="end"
+            android:background="@color/transparent"
+            android:textColor="@color/theme_accent"
+            android:layout_width="60dp"
+            android:layout_height="match_parent" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/joint_address_scrollView"
+        android:layout_below="@id/joint_applicant_toolbar_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="@dimen/open_account_margins"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.rilixtech.CountryCodePicker
+                    android:id="@+id/joint_applicant_ccp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/txt_joint_applicant_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/joint_applicant_ccp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/custom_white_background"
+                    android:hint="@string/hint_step5_primary_phone"
+                    android:inputType="phone"
+                    android:textAlignment="center" />
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/joint_applicant_phone_size_alert"
+                android:text="@string/phone_size_alert"
+                android:layout_marginTop="@dimen/open_account_note_margin"
+                android:textAlignment="center"
+                android:textColor="@color/debit_red"
+                android:textSize="13sp"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <RelativeLayout
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.rilixtech.CountryCodePicker
+                    android:id="@+id/joint_applicant_alternate_ccp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/txt_joint_applicant_alternate_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/joint_applicant_alternate_ccp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/custom_white_background"
+                    android:hint="@string/label_step5_alternate_phone"
+                    android:inputType="phone"
+                    android:textAlignment="center" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/joint_applicant_alternate_phone_size_alert"
+                android:text="@string/phone_size_alert"
+                android:layout_marginTop="@dimen/open_account_note_margin"
+                android:textAlignment="center"
+                android:textColor="@color/debit_red"
+                android:textSize="13sp"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/txt_joint_applicant_add1"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:inputType="textPostalAddress"
+                android:background="@drawable/custom_white_background"
+                android:hint="@string/hint_address_line1"
+                android:maxLength="30"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/txt_joint_applicant_add2"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:inputType="textPostalAddress"
+                android:background="@drawable/custom_white_background"
+                android:hint="@string/hint_address_line2"
+                android:maxLength="30"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/txt_joint_applicant_city"
+                android:background="@drawable/custom_white_background"
+                android:hint="@string/hint_city"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:textAlignment="center"
+                android:inputType="textPostalAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.example.util.textViewSpinner
+                android:id="@+id/spinner_joint_applicant_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_white_background"
+                android:entries="@array/states"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:hint="@string/hint_state"
+                android:textAlignment="center"
+                android:textColor="@color/bpblack" />
+            <EditText
+                android:id="@+id/txt_joint_applicant_state_province"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:background="@drawable/custom_white_background"
+                android:hint="@string/hint_step4_company_state_province"
+                android:visibility="gone"
+                android:textAlignment="center"
+                android:inputType="textPostalAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/txt_joint_applicant_zip"
+                android:background="@drawable/custom_white_background"
+                android:hint="@string/hint_zip"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:textAlignment="center"
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.example.util.textViewSpinner
+                android:id="@+id/spinner_joint_applicant_country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_white_background"
+                android:hint="@string/hint_country"
+                android:entries="@array/non_us_countries"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:textAlignment="center"
+                android:textColor="@color/bpblack" />
+            <CheckBox
+                android:id="@+id/cbox_joint_applicant_mailing_address"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:text="@string/label_step5_mailing_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/joint_applicant_mailing_address_view"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/txt_joint_applicant_mail_address1"
+                    android:background="@drawable/custom_white_background"
+                    android:layout_marginTop="@dimen/open_account_margins"
+                    android:hint="@string/hint_address_line1"
+                    android:maxLength="30"
+                    android:textAlignment="center"
+                    android:inputType="textPostalAddress"
+                    android:textColor="@color/bpblack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/txt_joint_applicant_mail_address2"
+                    android:background="@drawable/custom_white_background"
+                    android:hint="@string/hint_address_line2"
+                    android:maxLength="30"
+                    android:inputType="textPostalAddress"
+                    android:layout_marginTop="@dimen/open_account_margins"
+                    android:textColor="@color/bpblack"
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/txt_joint_applicant_mail_city"
+                    android:background="@drawable/custom_white_background"
+                    android:hint="@string/hint_city"
+                    android:textColor="@color/bpblack"
+                    android:textAlignment="center"
+                    android:layout_marginTop="@dimen/open_account_margins"
+                    android:layout_width="match_parent"
+                    android:inputType="textPostalAddress"
+                    android:layout_height="wrap_content" />
+
+                <com.example.util.textViewSpinner
+                    android:id="@+id/spinner_joint_applicant_mail_state"
+                    android:textColor="@color/bpblack"
+                    android:hint="@string/hint_state"
+                    android:background="@drawable/custom_white_background"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/open_account_margins"
+                    android:entries="@array/states"
+                    android:textAlignment="center"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/txt_joint_applicant_mail_state_province"
+                    android:background="@drawable/custom_white_background"
+                    android:hint="@string/hint_step4_company_state_province"
+                    android:textAlignment="center"
+                    android:visibility="gone"
+                    android:inputType="textPostalAddress"
+                    android:layout_marginTop="@dimen/open_account_margins"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/txt_joint_applicant_mail_zip"
+                    android:background="@drawable/custom_white_background"
+                    android:hint="@string/hint_zip"
+                    android:textColor="@color/bpblack"
+                    android:textAlignment="center"
+                    android:inputType="textPostalAddress"
+                    android:layout_marginTop="@dimen/open_account_margins"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.example.util.textViewSpinner
+                    android:id="@+id/spinner_joint_applicant_mail_country"
+                    android:textColor="@color/bpblack"
+                    android:hint="@string/hint_country"
+                    android:background="@drawable/custom_white_background"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/open_account_margins"
+                    android:entries="@array/countries"
+                    android:textAlignment="center"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:id="@+id/joint_applicant_non_us_view"
+                    android:orientation="vertical"
+                    android:layout_marginTop="@dimen/open_account_margins"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/txt_joint_applicant_non_us"
+                        android:layout_marginTop="@dimen/open_account_note_margin"
+                        android:textColor="@color/bpblack"
+                        android:inputType="textAutoCorrect"
+                        android:hint="@string/label_step5_reason_nonUS"
+                        android:textAlignment="center"
+                        android:background="@drawable/custom_white_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/joint_applicant_foreign_us_mailing_view"
+                    android:layout_marginTop="@dimen/open_account_margins"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.example.util.textViewSpinner
+                        android:id="@+id/spinner_joint_applicant_visa_type"
+                        android:background="@drawable/custom_white_background"
+                        android:hint="@string/visa_type"
+                        android:textAlignment="center"
+                        android:entries="@array/foreign_visa_type"
+                        android:textColor="@color/bpblack"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/txt_joint_applicant_visa_expiration_date"
+                        android:inputType="date"
+                        android:background="@drawable/custom_white_background"
+                        android:layout_marginTop="@dimen/open_account_margins"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:hint="@string/expiration_date"
+                        android:textAlignment="center"
+                        android:focusableInTouchMode="false"
+                        android:textColor="@color/bpblack"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/txt_joint_applicant_reason_us_mailing"
+                        android:layout_marginTop="@dimen/open_account_margins"
+                        android:hint="@string/reason_for_using_a_u_s_mailing_address"
+                        android:textColor="@color/bpblack"
+                        android:inputType="textAutoCorrect"
+                        android:textAlignment="center"
+                        android:background="@drawable/custom_white_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

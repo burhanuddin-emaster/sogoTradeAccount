@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    tools:ignore="HardcodedText"
+    tools:context="com.example.ui.open_account.Step10">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/step8_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="?attr/colorPrimary"
+        app:elevation="@dimen/elevation_default"
+        app:layout_scrollFlags="enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <Button
+            android:id="@+id/btn_step8_back"
+            android:layout_width="60dp"
+            android:background="@color/transparent"
+            android:drawableStart="@drawable/arrowleft"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:text="@string/back"
+            android:drawableTint="@color/theme_accent"
+            android:textColor="@color/theme_accent"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:text="@string/step8"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/bpWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/step8_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/step8_toolbar">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="@dimen/open_account_margins"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/txt_step8_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/custom_white_background"
+                android:hint="@string/hint_step8_email"
+                android:textAlignment="center"
+                android:textColor="@color/bpblack" />
+
+            <EditText
+                android:id="@+id/txt_step8_confirm_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/custom_white_background"
+                android:hint="@string/hint_step8_confirm_email"
+                android:textAlignment="center"
+                android:textColor="@color/bpblack" />
+
+            <TextView
+                android:id="@+id/label_step8_email_alert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_step8_email_alert"
+                android:textAlignment="center"
+                android:textColor="@color/debit_red"
+                android:textSize="@dimen/calendar_text_small"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/txt_step8_user_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:inputType="textNoSuggestions"
+                android:digits="@string/digits_letter_number_underdash_userID"
+                android:background="@drawable/custom_white_background"
+                android:hint="@string/hint_step8_userID"
+                android:textAlignment="center"
+                android:textColor="@color/bpblack" />
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txt_step8_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_white_background"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/hint_step8_password"
+                    android:inputType="textPassword"
+                    android:textAlignment="center"
+                    android:textColor="@color/bpblack" />
+                <ImageButton
+                    android:id="@+id/step8_toggle_show_password"
+                    android:src="@drawable/eye_off"
+                    android:contentDescription="@string/label_empty"
+                    android:background="@color/transparent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignTop="@id/txt_step8_password"
+                    android:layout_alignBottom="@id/txt_step8_password"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+
+            <com.example.util.textViewSpinner
+                android:id="@+id/spinner_step8_security_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:background="@drawable/custom_white_background"
+                android:hint="@string/hint_step8_security_question"
+                android:textAlignment="center"
+                android:textColor="@color/bpblack" />
+
+            <EditText
+                android:id="@+id/txt_step8_security_answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:background="@drawable/custom_white_background"
+                android:hint="@string/hint_step8_security_answer"
+                android:inputType="textNoSuggestions"
+                android:textAlignment="center"
+                android:textColor="@color/bpblack" />
+
+            <EditText
+                android:id="@+id/txt_step8_pin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:inputType="numberPassword"
+                android:background="@drawable/custom_white_background"
+                android:hint="@string/hint_step8_pin"
+                android:digits="@string/digits_only_numbers"
+                android:maxLength="6"
+                android:textAlignment="center"
+                android:textColor="@color/bpblack" />
+
+            <TextView
+                android:id="@+id/label_step8_pin_alert"
+                android:layout_marginTop="@dimen/open_account_note_margin"
+                android:textColor="@color/debit_red"
+                android:textSize="13sp"
+                android:visibility="gone"
+                android:text="@string/label_pin_format"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/txt_step8_personal_phrase"
+                android:background="@drawable/custom_white_background"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:hint="@string/step8_personal_phrase"
+                android:textAlignment="center"
+                android:inputType="textNoSuggestions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:paddingTop="@dimen/open_account_margins"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <WebView
+                    android:id="@+id/step8_webView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/cbox_step8_agreement"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:textColor="@color/bpblack"
+                android:text="@string/label_step8_agreement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/btn_step8_finish"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:text="@string/btn_step8_open_account"
+                android:textAllCaps="false"
+                android:layout_marginBottom="@dimen/open_account_margins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/step8_popup_submit_page"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:padding="@dimen/open_account_margins"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/first_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/step8_first_mark"
+                android:src="@drawable/ic_sogo_logo"
+                android:layout_width="0dp"
+                android:contentDescription="@string/step8_submit_application"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"/>
+
+            <TextView
+                android:id="@+id/step8_first_message"
+                android:text="@string/step8_submit_application"
+                android:layout_width="0dp"
+                android:textAlignment="center"
+                android:textColor="@color/bpblack"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/second_row"
+            android:visibility="invisible"
+            android:layout_marginTop="@dimen/open_account_margins"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/step8_second_mark"
+                android:src="@drawable/ic_sogo_logo"
+                android:layout_width="0dp"
+                android:contentDescription="@string/step8_submit_application"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"/>
+
+            <TextView
+                android:id="@+id/step8_second_message"
+                android:text="@string/upload_files_message"
+                android:layout_width="0dp"
+                android:textAlignment="center"
+                android:textColor="@color/bpblack"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/success_message"
+            android:orientation="vertical"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <TextView
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:text="Thank you for opening an account with SogoTrade!"
+                android:textColor="@color/abs_holo_blue_light"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="@dimen/open_account_note_margin"
+                android:text="@string/step8_account_created_message"
+                android:textColor="@color/bpblack"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="@dimen/open_account_note_margin"
+                android:text="Sincerely,\nSogoTrade, Inc."
+                android:textStyle="bold"
+                android:textColor="@color/bpblack"
+                android:textAlignment="viewStart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/step8_popup_button"
+            android:text="@string/done_label"
+            android:visibility="invisible"
+            android:layout_marginTop="30dp"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</RelativeLayout>

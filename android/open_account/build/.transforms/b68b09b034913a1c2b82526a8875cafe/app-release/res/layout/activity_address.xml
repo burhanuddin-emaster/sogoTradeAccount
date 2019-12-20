@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/address_parent_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    tools:context="com.example.ui.open_account.Address">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/step2_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="?attr/colorPrimary"
+        app:elevation="@dimen/elevation_default"
+        app:layout_scrollFlags="enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <Button
+            android:id="@+id/btn_address_back"
+            android:layout_width="60dp"
+            android:background="@color/transparent"
+            android:drawableStart="@drawable/arrowleft"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:text="@string/back"
+            android:drawableTint="@color/theme_accent"
+            android:textColor="@color/theme_accent"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:text="@string/address"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/bpWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btn_address_next"
+            android:text="@string/uv_next"
+            android:textAllCaps="false"
+            android:layout_gravity="end"
+            android:background="@color/transparent"
+            android:textColor="@color/theme_accent"
+            android:layout_width="60dp"
+            android:layout_height="match_parent" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/address_scrollview"
+        android:layout_below="@id/step2_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/open_account_margins">
+
+        <RelativeLayout
+            android:id="@+id/step2_inner_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/label_step2_notice"
+                android:textColor="@color/light_gray"
+                android:textSize="@dimen/calendar_text_small"
+                android:textAlignment="center"
+                android:text="@string/label_step2_page_notice"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/txt_address_line1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label_step2_notice"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:maxLength="30"
+                android:background="@drawable/custom_white_background"
+                android:hint="@string/hint_address_line1"
+                android:inputType="textPostalAddress"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/txt_address_line2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_address_line1"
+                android:layout_centerHorizontal="true"
+                android:maxLength="30"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:background="@drawable/custom_white_background"
+                android:hint="@string/hint_address_line2"
+                android:inputType="textPostalAddress"
+                android:textAlignment="center" />
+
+
+            <EditText
+                android:id="@+id/txt_address_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_address_line2"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:background="@drawable/custom_white_background"
+                android:hint="@string/hint_city"
+                android:inputType="textPostalAddress"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/txt_address_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_address_city"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:background="@drawable/custom_white_background"
+                android:hint="@string/hint_step4_company_state_province"
+                android:inputType="textPostalAddress"
+                android:textAlignment="center" />
+
+            <com.example.util.textViewSpinner
+                android:id="@+id/txt_address_us_states"
+                android:layout_below="@id/txt_address_state"
+                android:background="@drawable/custom_white_background"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:entries="@array/states"
+                android:textColor="@color/bpblack"
+                android:hint="@string/hint_state"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/txt_address_zip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_address_us_states"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:background="@drawable/custom_white_background"
+                android:hint="@string/hint_zip"
+                android:inputType="text"
+                android:textAlignment="center" />
+
+            <com.example.util.textViewSpinner
+                android:id="@+id/txt_address_country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_address_zip"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:background="@drawable/custom_white_background"
+                android:entries="@array/non_us_countries"
+                android:hint="@string/hint_country"
+                android:textAlignment="center"
+                android:textColor="@color/bpblack" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

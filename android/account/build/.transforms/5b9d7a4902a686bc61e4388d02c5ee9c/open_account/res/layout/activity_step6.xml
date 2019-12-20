@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusableInTouchMode="true"
+    tools:context="com.example.ui.open_account.Step6">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/step6_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="?attr/colorPrimary"
+        app:elevation="@dimen/elevation_default"
+        app:layout_scrollFlags="enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <Button
+            android:id="@+id/btn_step6_back"
+            android:layout_width="60dp"
+            android:background="@color/transparent"
+            android:drawableStart="@drawable/arrowleft"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:text="@string/back"
+            android:drawableTint="@color/theme_accent"
+            android:textColor="@color/theme_accent"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:text="@string/step6"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/bpWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/step6_next_button"
+            android:text="@string/uv_next"
+            android:textAllCaps="false"
+            android:layout_gravity="end"
+            android:background="@color/transparent"
+            android:textColor="@color/theme_accent"
+            android:layout_width="60dp"
+            android:layout_height="match_parent" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/step6_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/step6_toolbar">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="@dimen/open_account_margins"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/bpblack"
+                android:text="@string/label_step6_first"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/radio_step6_first_yes"
+                    android:text="@string/label_yes"
+                    android:layout_toStartOf="@id/center_second_y"
+                    android:layout_marginEnd="@dimen/open_account_margins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <View
+                    android:id="@+id/center_second_y"
+                    android:layout_centerInParent="true"
+                    android:background="@color/transparent"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent" />
+                <RadioButton
+                    android:id="@+id/radio_step6_first_no"
+                    android:text="@string/label_no"
+                    android:layout_toEndOf="@id/center_second_y"
+                    android:layout_marginStart="@dimen/open_account_margins"
+                    android:checked="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/txt_step6_symbol"
+                android:hint="@string/label_row_description_symbol"
+                android:background="@drawable/custom_white_background"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:textAlignment="center"
+                android:inputType="textNoSuggestions"
+                android:textColor="@color/bpblack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textColor="@color/bpblack"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:text="@string/label_step6_second"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/radio_step6_second_yes"
+                    android:text="@string/label_yes"
+                    android:layout_toStartOf="@id/center_third_y"
+                    android:layout_marginEnd="@dimen/open_account_margins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <View
+                    android:id="@+id/center_third_y"
+                    android:layout_centerInParent="true"
+                    android:background="@color/transparent"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent" />
+                <RadioButton
+                    android:id="@+id/radio_step6_second_no"
+                    android:text="@string/label_no"
+                    android:layout_toEndOf="@id/center_third_y"
+                    android:layout_marginStart="@dimen/open_account_margins"
+                    android:checked="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/txt_step6_firm_name"
+                android:hint="@string/hint_step6_firm_name"
+                android:background="@drawable/custom_white_background"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:textAlignment="center"
+                android:inputType="textNoSuggestions"
+                android:textColor="@color/bpblack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:textColor="@color/bpblack"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:text="@string/label_step6_third"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/radio_step6_third_yes"
+                    android:text="@string/label_yes"
+                    android:layout_toStartOf="@id/center_y"
+                    android:layout_marginEnd="@dimen/open_account_margins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <View
+                    android:id="@+id/center_y"
+                    android:layout_centerInParent="true"
+                    android:background="@color/transparent"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent" />
+                <RadioButton
+                    android:id="@+id/radio_step6_third_no"
+                    android:text="@string/label_no"
+                    android:layout_toEndOf="@id/center_y"
+                    android:layout_marginStart="@dimen/open_account_margins"
+                    android:checked="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:id="@+id/step6_third_view"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/open_account_margins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txt_step6_name"
+                    android:hint="@string/hint_step6_name"
+                    android:background="@drawable/custom_white_background"
+                    android:textAlignment="center"
+                    android:inputType="textNoSuggestions"
+                    android:textColor="@color/bpblack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/txt_step6_political_title"
+                    android:hint="@string/hint_step6_political_title"
+                    android:background="@drawable/custom_white_background"
+                    android:textAlignment="center"
+                    android:layout_marginTop="@dimen/open_account_margins"
+                    android:inputType="textNoSuggestions"
+                    android:textColor="@color/bpblack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/txt_step6_organization_name"
+                    android:hint="@string/hint_step6_organization_name"
+                    android:background="@drawable/custom_white_background"
+                    android:textAlignment="center"
+                    android:layout_marginTop="@dimen/open_account_margins"
+                    android:inputType="textNoSuggestions"
+                    android:textColor="@color/bpblack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.example.util.textViewSpinner
+                    android:id="@+id/spinner_step6_relationship"
+                    android:hint="@string/hint_step6_relationship_to_owner"
+                    android:layout_marginTop="@dimen/open_account_margins"
+                    android:textAlignment="center"
+                    android:background="@drawable/custom_white_background"
+                    android:textColor="@color/bpblack"
+                    android:entries="@array/relationship_array"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

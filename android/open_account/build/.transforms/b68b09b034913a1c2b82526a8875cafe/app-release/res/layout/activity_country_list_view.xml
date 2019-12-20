@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ui.open_account.Country">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/country_toolbar"
+        android:layout_width="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="40dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="?attr/colorPrimary"
+        app:elevation="@dimen/elevation_default"
+        app:layout_scrollFlags="enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <Button
+            android:id="@+id/btn_country_back"
+            android:layout_width="60dp"
+            android:background="@color/transparent"
+            android:drawableStart="@drawable/arrowleft"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:text="@string/back"
+            android:drawableTint="@color/theme_accent"
+            android:textColor="@color/theme_accent"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:id="@+id/new_account1_page_title"
+            android:text="@string/new_account_Country"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/bpWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/country_next_button"
+            android:text="@string/uv_next"
+            android:textAllCaps="false"
+            android:layout_gravity="end"
+            android:background="@color/transparent"
+            android:textColor="@color/theme_accent"
+            android:layout_width="60dp"
+            android:layout_height="match_parent" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ListView
+        android:id="@+id/country_list"
+        app:layout_constraintTop_toBottomOf="@id/country_toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_below="@id/country_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="0dp">
+    </ListView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="55dp"
+    android:descendantFocusability="blocksDescendants"
+    tools:ignore="KeyboardInaccessibleWidget">
+
+    <View
+        android:layout_alignParentTop="true"
+        android:background="@color/light_gray"
+        android:layout_width="match_parent"
+        android:layout_height="0.25dp" />
+
+    <TextView
+        android:id="@+id/country_flag"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+    <TextView
+        android:id="@+id/country_name"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/country_flag"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:gravity="center_vertical"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:textColor="@color/bpblack" />
+
+    <View
+        android:layout_alignParentBottom="true"
+        android:background="@color/light_gray"
+        android:layout_width="match_parent"
+        android:layout_height="0.25dp" />
+
+</RelativeLayout>

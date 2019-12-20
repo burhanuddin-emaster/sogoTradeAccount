@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/step7_main_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusableInTouchMode="true"
+    tools:context="com.example.ui.open_account.Step7">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/step7_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="?attr/colorPrimary"
+        app:elevation="@dimen/elevation_default"
+        app:layout_scrollFlags="enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <Button
+            android:id="@+id/btn_step7_back"
+            android:layout_width="60dp"
+            android:background="@color/transparent"
+            android:drawableStart="@drawable/arrowleft"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:text="@string/back"
+            android:drawableTint="@color/theme_accent"
+            android:textColor="@color/theme_accent"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/step7"
+            android:textColor="@color/bpWhite"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_step7_next"
+            android:text="@string/uv_next"
+            android:textAllCaps="false"
+            android:layout_gravity="end"
+            android:background="@color/transparent"
+            android:textColor="@color/theme_accent"
+            android:layout_width="60dp"
+            android:layout_height="match_parent" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/step7_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/step7_toolbar">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="@dimen/open_account_margins"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="@string/label_step2_page_notice"
+                android:textColor="@color/light_gray"
+                android:textAlignment="center"
+                android:textSize="@dimen/calendar_text_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_step7_title_1"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:textAlignment="center"
+                android:textColor="@color/bpblack"
+                android:textStyle="bold" />
+
+            <com.example.util.textViewSpinner
+                android:id="@+id/spinner_step7_annual_income"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:background="@drawable/custom_white_background"
+                android:hint="@string/label_step7_annual_income"
+                android:textAlignment="center"
+                android:textColor="@color/bpblack" />
+            <RelativeLayout
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.example.util.textViewSpinner
+                    android:id="@+id/spinner_step7_liquid_net"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/custom_white_background"
+                    android:hint="@string/label_step7_liquid_net"
+                    android:textAlignment="center"
+                    android:textColor="@color/bpblack" />
+                <Button
+                    android:id="@+id/btn_step7_liquid_net"
+                    android:background="@drawable/custom_round_button"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/question_mark"
+                    android:textColor="@color/bpWhite"
+                    android:layout_centerVertical="true"
+                    android:onClick="onViewClicked"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.example.util.textViewSpinner
+                    android:id="@+id/spinner_step7_total_net"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/custom_white_background"
+                    android:hint="@string/label_step7_total_net"
+                    android:textAlignment="center"
+                    android:textColor="@color/bpblack" />
+                <Button
+                    android:id="@+id/btn_step7_total_net"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/custom_round_button"
+                    android:text="@string/question_mark"
+                    android:textColor="@color/bpWhite"
+                    android:onClick="onViewClicked"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+            </RelativeLayout>
+            
+            <com.example.util.textViewSpinner
+                android:id="@+id/spinner_step7_investment_objective"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:background="@drawable/custom_white_background"
+                android:hint="@string/label_step7_objective"
+                android:textAlignment="center"
+                android:textColor="@color/bpblack" />
+
+            <TextView
+                android:id="@+id/label_step7_margin_objective_alert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/open_account_note_margin"
+                android:text="@string/label_step7_investment_objective_alert"
+                android:textAlignment="center"
+                android:textColor="@color/debit_red"
+                android:textSize="@dimen/calendar_text_small"
+                android:textStyle="bold"
+                android:visibility="gone" />
+            <com.example.util.textViewSpinner
+                android:id="@+id/spinner_step7_investment_experience"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:background="@drawable/custom_white_background"
+                android:hint="@string/label_step7_experience"
+                android:textAlignment="center"
+                android:textColor="@color/bpblack" />
+            <TextView
+                android:id="@+id/label_step7_margin_experience_alert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/open_account_note_margin"
+                android:text="@string/label_step7_investment_experience_alert"
+                android:textAlignment="center"
+                android:textColor="@color/debit_red"
+                android:textSize="@dimen/calendar_text_small"
+                android:textStyle="bold"
+                android:visibility="gone" />
+            <com.example.util.textViewSpinner
+                android:id="@+id/spinner_step7_risk_tolerance"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:background="@drawable/custom_white_background"
+                android:hint="@string/label_step7_risk_tolerance"
+                android:textAlignment="center"
+                android:textColor="@color/bpblack" />
+
+            <TextView
+                android:id="@+id/label_step7_margin_risk_alert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/open_account_note_margin"
+                android:text="@string/label_step7_risk_alert"
+                android:textAlignment="center"
+                android:textColor="@color/debit_red"
+                android:textSize="@dimen/calendar_text_small"
+                android:textStyle="bold"
+                android:visibility="gone" />
+            <com.example.util.textViewSpinner
+                android:id="@+id/spinner_step7_total_tax_bracket"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:background="@drawable/custom_white_background"
+                android:hint="@string/label_step7_tax_bracket"
+                android:textAlignment="center"
+                android:textColor="@color/bpblack" />
+
+            <LinearLayout
+                android:id="@+id/step7_foreign_account_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:orientation="vertical"
+                android:visibility="visible">
+                <com.example.util.textViewSpinner
+                    android:id="@+id/spinner_step7_estimated_deposit"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/custom_white_background"
+                    android:hint="@string/label_step7_estimated_deposit"
+                    android:textAlignment="center"
+                    android:textColor="@color/bpblack" />
+                <com.example.util.textViewSpinner
+                    android:id="@+id/spinner_step7_source_of_deposit"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="@dimen/open_account_margins"
+                    android:background="@drawable/custom_white_background"
+                    android:hint="@string/label_step7_source_of_deposit"
+                    android:textAlignment="center"
+                    android:textColor="@color/bpblack" />
+                <com.example.util.textViewSpinner
+                    android:id="@+id/spinner_step7_expected_withdrawals"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="@dimen/open_account_margins"
+                    android:background="@drawable/custom_white_background"
+                    android:hint="@string/label_step7_expected_withdrawals"
+                    android:textAlignment="center"
+                    android:textColor="@color/bpblack" />
+                <com.example.util.textViewSpinner
+                    android:id="@+id/spinner_step7_cn_banks"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="@dimen/open_account_margins"
+                    android:background="@drawable/custom_white_background"
+                    android:hint="@string/hint_step7_primary_bank_name"
+                    android:textAlignment="center"
+                    android:textColor="@color/bpblack" />
+                <EditText
+                    android:id="@+id/txt_step7_primary_bank"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="@dimen/open_account_margins"
+                    android:background="@drawable/custom_white_background"
+                    android:hint="@string/hint_step7_primary_bank_name"
+                    android:inputType="textNoSuggestions"
+                    android:textAlignment="center"
+                    android:textColor="@color/bpblack" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:text="@string/label_step7_title_2"
+                android:textAlignment="center"
+                android:textColor="@color/bpblack"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.example.util.textViewSpinner
+                    android:id="@+id/spinner_step7_time_horizon"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/custom_white_background"
+                    android:hint="@string/label_step7_time_horizon"
+                    android:textAlignment="center"
+                    android:textColor="@color/bpblack" />
+                <Button
+                    android:id="@+id/btn_step7_time_horizon"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/custom_round_button"
+                    android:text="@string/question_mark"
+                    android:textColor="@color/bpWhite"
+                    android:onClick="onViewClicked"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.example.util.textViewSpinner
+                    android:id="@+id/spinner_step7_liquidity_need"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/custom_white_background"
+                    android:hint="@string/label_step7_liquidity_need"
+                    android:textAlignment="center"
+                    android:textColor="@color/bpblack" />
+                <Button
+                    android:id="@+id/btn_step7_liquidity_need"
+                    android:text="@string/question_mark"
+                    android:textColor="@color/bpWhite"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/custom_round_button"
+                    android:layout_alignParentEnd="true"
+                    android:onClick="onViewClicked"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/label_step7_margin_liquidity_alert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/open_account_note_margin"
+                android:text="@string/label_step7_liquidity_alert"
+                android:textAlignment="center"
+                android:textColor="@color/debit_red"
+                android:textSize="@dimen/calendar_text_small"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/step4_main_content"
+    android:focusableInTouchMode="true"
+    tools:context="com.example.ui.open_account.Step4">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/step4_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="?attr/colorPrimary"
+        app:elevation="@dimen/elevation_default"
+        app:layout_scrollFlags="enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <Button
+            android:id="@+id/btn_step4_back"
+            android:layout_width="60dp"
+            android:background="@color/transparent"
+            android:drawableStart="@drawable/arrowleft"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:text="@string/back"
+            android:drawableTint="@color/theme_accent"
+            android:textColor="@color/theme_accent"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:text="@string/step4"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/bpWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/step4_next_button"
+            android:text="@string/uv_next"
+            android:textAllCaps="false"
+            android:layout_gravity="end"
+            android:background="@color/transparent"
+            android:textColor="@color/theme_accent"
+            android:layout_width="60dp"
+            android:layout_height="match_parent" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/step4_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/step4_toolbar">
+
+        <RelativeLayout
+            android:padding="@dimen/open_account_margins"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/step4_domestic_ssn"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txt_step4_ssn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/open_account_margins"
+                    android:background="@drawable/custom_white_background"
+                    android:hint="@string/label_step4_ssn"
+                    android:textAlignment="center"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:textColor="@color/bpblack" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/step4_foreign_FTIN"
+                android:orientation="vertical"
+                android:layout_below="@id/step4_domestic_ssn"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/cbox_step4_FTIN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_FTIN"
+                    android:checked="false"
+                    android:textColor="@color/bpblack" />
+
+                <TextView
+                    android:text="@string/ftin_notice"
+                    android:textSize="13sp"
+                    android:layout_marginTop="@dimen/open_account_note_margin"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/txt_step4_FTIN"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/open_account_margins"
+                    android:visibility="gone"
+                    android:background="@drawable/custom_white_background"
+                    android:hint="@string/hint_FTIN"
+                    android:textAlignment="center"
+                    android:inputType="text"
+                    android:digits="@string/digits_letters_numbers_FTIN_Zip"
+                    android:textColor="@color/bpblack" />
+            </LinearLayout>
+
+            <com.example.util.textViewSpinner
+                android:id="@+id/txt_step4_citizenship"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:layout_below="@id/step4_foreign_FTIN"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:background="@drawable/custom_white_background"
+                android:entries="@array/countries"
+                android:hint="@string/hint_joint_citizenship"
+                android:clickable="false"
+                android:focusable="false"
+                android:textAlignment="center"
+                android:textColor="@color/bpblack" />
+
+            <LinearLayout
+                android:id="@+id/legal_residency_status_added_view"
+                android:orientation="vertical"
+                android:layout_below="@id/txt_step4_citizenship"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.example.util.textViewSpinner
+                    android:id="@+id/step4_legal_residency_spinner"
+                    android:background="@drawable/custom_white_background"
+                    android:hint="@string/legal_residency_status"
+                    android:textAlignment="center"
+                    android:entries="@array/legal_residency"
+                    android:textColor="@color/bpblack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/txt_legal_residency_expiration_date"
+                    android:inputType="date"
+                    android:background="@drawable/custom_white_background"
+                    android:layout_marginTop="@dimen/open_account_margins"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:hint="@string/expiration_date"
+                    android:textAlignment="center"
+                    android:focusableInTouchMode="false"
+                    android:textColor="@color/bpblack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <com.example.util.textViewSpinner
+                android:id="@+id/spinner_step4_marital_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/legal_residency_status_added_view"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:background="@drawable/custom_white_background"
+                android:entries="@array/marital_status"
+                android:hint="@string/label_step4_marital_status"
+                android:textAlignment="center"
+                android:textColor="@color/bpblack" />
+
+            <RelativeLayout
+                android:id="@+id/stepper_step4_dependents_row"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@id/spinner_step4_marital_status"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/stepper_decrease"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/account_green"
+                    android:text="@string/label_default_dash" />
+
+                <TextView
+                    android:id="@+id/stepper_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/open_account_note_margin"
+                    android:layout_marginEnd="@dimen/open_account_note_margin"
+                    android:layout_toStartOf="@id/stepper_increase"
+                    android:layout_toEndOf="@id/stepper_decrease"
+                    android:background="@drawable/custom_white_background"
+                    android:hint="@string/label_step4_dependents"
+                    android:textAlignment="center"
+                    android:textColor="@color/bpblack" />
+
+                <Button
+                    android:id="@+id/stepper_increase"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:background="@color/account_green"
+                    android:text="@string/digit_zero_text" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/step4_dependent_notice"
+                android:text="@string/label_step4_dependent_notice"
+                android:layout_below="@id/stepper_step4_dependents_row"
+                android:layout_marginTop="@dimen/open_account_note_margin"
+                android:textSize="@dimen/calendar_text_small"
+                android:textColor="@color/light_gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.example.util.textViewSpinner
+                android:id="@+id/spinner_step4_employment_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/step4_dependent_notice"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:background="@drawable/custom_white_background"
+                android:entries="@array/employment_status"
+                android:hint="@string/label_step4_employment_status"
+                android:textAlignment="center"
+                android:textColor="@color/bpblack" />
+
+            <LinearLayout
+                android:id="@+id/step4_employed_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spinner_step4_employment_status"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:layout_marginBottom="@dimen/open_account_margins"
+                android:orientation="vertical">
+                <TextView
+                    android:text="@string/label_step4_employed"
+                    android:textColor="@color/light_gray"
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/step4_employed_company_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_white_background"
+                    android:inputType="text"
+                    android:hint="@string/hint_step4_company_name"
+                    android:textAlignment="center"
+                    android:textColor="@color/bpblack"
+                    android:layout_marginTop="@dimen/open_account_note_margin"/>
+                <CheckBox
+                    android:id="@+id/cbox_step4_on_us_exchange"
+                    android:layout_marginTop="@dimen/open_account_note_margin"
+                    android:textColor="@color/bpblack"
+                    android:text="@string/public_trade_symbol_question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="HardcodedText" />
+                <EditText
+                    android:id="@+id/step4_traded_symbol"
+                    android:background="@drawable/custom_white_background"
+                    android:layout_marginTop="@dimen/open_account_margins"
+                    android:textAlignment="center"
+                    android:textColor="@color/bpblack"
+                    android:inputType="textCapCharacters"
+                    android:visibility="gone"
+                    android:hint="@string/label_row_description_symbol"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <com.example.util.textViewSpinner
+                    android:id="@+id/step4_employed_company_country_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_white_background"
+                    android:textAlignment="center"
+                    android:layout_marginTop="@dimen/open_account_margins"
+                    android:hint="@string/hint_step4_company_country"
+                    android:textColor="@color/bpblack" />
+                <EditText
+                    android:id="@+id/step4_employed_company_address1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/open_account_margins"
+                    android:inputType="textPostalAddress"
+                    android:background="@drawable/custom_white_background"
+                    android:hint="@string/hint_step4_company_add1"
+                    android:maxLength="30"
+                    android:textAlignment="center"
+                    android:textColor="@color/bpblack"/>
+                <EditText
+                    android:id="@+id/step4_employed_company_address2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/open_account_margins"
+                    android:inputType="textPostalAddress"
+                    android:maxLength="30"
+                    android:background="@drawable/custom_white_background"
+                    android:hint="@string/hint_step4_company_add2"
+                    android:textAlignment="center"
+                    android:textColor="@color/bpblack" />
+                <EditText
+                    android:id="@+id/step4_employed_company_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/open_account_margins"
+                    android:inputType="textPostalAddress"
+                    android:background="@drawable/custom_white_background"
+                    android:hint="@string/hint_step4_company_city"
+                    android:textAlignment="center"
+                    android:textColor="@color/bpblack" />
+
+                <com.example.util.textViewSpinner
+                    android:id="@+id/step4_employed_company_state_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_white_background"
+                    android:hint="@string/hint_step4_company_state"
+                    android:layout_marginTop="@dimen/open_account_margins"
+                    android:textAlignment="center"
+                    android:entries="@array/states"
+                    android:textColor="@color/bpblack" />
+                <EditText
+                    android:id="@+id/step4_employed_state_province"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/open_account_margins"
+                    android:inputType="textPostalAddress"
+                    android:background="@drawable/custom_white_background"
+                    android:hint="@string/hint_step4_company_state_province"
+                    android:textAlignment="center"
+                    android:textColor="@color/bpblack" />
+                <EditText
+                    android:id="@+id/step4_employed_zip_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/open_account_margins"
+                    android:background="@drawable/custom_white_background"
+                    android:hint="@string/hint_zip"
+                    android:inputType="text"
+                    android:textAlignment="center"
+                    android:textColor="@color/bpblack" />
+                <RelativeLayout
+                    android:layout_marginTop="@dimen/open_account_margins"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.rilixtech.CountryCodePicker
+                        android:id="@+id/step4_employed_ccp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/step4_employed_company_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/step4_employed_ccp"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/custom_white_background"
+                        android:hint="@string/hint_step4_company_business_phone"
+                        android:inputType="phone"
+                        android:textAlignment="center"
+                        android:textColor="@color/bpblack" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/step4_employed_phone_size_alert"
+                    android:text="@string/phone_size_alert"
+                    android:layout_marginTop="@dimen/open_account_note_margin"
+                    android:textAlignment="center"
+                    android:textColor="@color/debit_red"
+                    android:textSize="13sp"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/step4_employed_company_length"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_white_background"
+                    android:textAlignment="center"
+                    android:hint="@string/hint_step4_company_length_employment"
+                    android:textColor="@color/bpblack"
+                    android:inputType="number"
+                    android:layout_marginTop="@dimen/open_account_margins" />
+
+                <com.example.util.textViewSpinner
+                    android:id="@+id/step4_employed_company_type_business"
+                    android:layout_marginTop="@dimen/open_account_margins"
+                    android:hint="@string/hint_step4_company_type_business"
+                    android:textAlignment="center"
+                    android:entries="@array/type_of_business"
+                    android:background="@drawable/custom_white_background"
+                    android:textColor="@color/bpblack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <CheckBox
+                    android:id="@+id/step4_employed_cbox_personal_use"
+                    android:layout_marginTop="@dimen/open_account_margins"
+                    android:textColor="@color/bpblack"
+                    android:buttonTint="@color/bpblack"
+                    android:text="@string/label_step4_company_personal_use"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/step4_employed_other_business"
+                    android:hint="@string/hint_other_type_business_specify"
+                    android:background="@drawable/custom_white_background"
+                    android:textColor="@color/bpblack"
+                    android:textAlignment="center"
+                    android:layout_marginTop="@dimen/open_account_margins"
+                    android:visibility="gone"
+                    android:inputType="textAutoCorrect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.example.util.textViewSpinner
+                    android:id="@+id/step4_employed_company_position"
+                    android:layout_marginTop="@dimen/open_account_margins"
+                    android:hint="@string/hint_step4_company_position"
+                    android:textAlignment="center"
+                    android:entries="@array/position_title"
+                    android:background="@drawable/custom_white_background"
+                    android:textColor="@color/bpblack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/step4_employed_other_position"
+                    android:background="@drawable/custom_white_background"
+                    android:textColor="@color/bpblack"
+                    android:textAlignment="center"
+                    android:hint="@string/hint_other_type_business_specify"
+                    android:layout_marginTop="@dimen/open_account_margins"
+                    android:visibility="gone"
+                    android:inputType="textAutoCorrect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/step4_income_source_view"
+                android:layout_below="@id/step4_employed_view"
+                android:orientation="vertical"
+                android:visibility="visible"
+                android:layout_marginBottom="@dimen/open_account_margins"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.example.util.textViewSpinner
+                    android:id="@+id/step4_income_source_spinner"
+                    android:layout_marginTop="@dimen/open_account_margins"
+                    android:hint="@string/label_step4_income_source"
+                    android:entries="@array/income_source"
+                    android:background="@drawable/custom_white_background"
+                    android:textAlignment="center"
+                    android:textColor="@color/bpblack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/step4_income_other"
+                    android:layout_marginTop="@dimen/open_account_margins"
+                    android:background="@drawable/custom_white_background"
+                    android:hint="@string/hint_other_type_business_specify"
+                    android:textColor="@color/bpblack"
+                    android:textAlignment="center"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

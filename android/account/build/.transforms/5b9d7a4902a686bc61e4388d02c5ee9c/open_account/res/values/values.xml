@@ -1,0 +1,890 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="account_types_foreign">
+        <item>Individual Account</item>
+        <item>Joint Account</item>
+    </string-array>
+    <string-array name="account_types_us">
+        <item>Individual Account</item>
+        <item>Joint Account</item>
+        <item>Traditional IRA</item>
+        <item>Roth IRA</item>
+        <item>Rollover IRA</item>
+    </string-array>
+    <string-array name="annual_income">
+        <item>Less than $25,000</item>
+        <item>$25,001 -$50,000</item>
+        <item>$50,001 -$100,000</item>
+        <item>$100,001 -$200,000</item>
+        <item>$200,001 -$300,000</item>
+        <item>$300,001 -$500,000</item>
+        <item>$500,001 -$1,200,000</item>
+        <item>Above $1,200,001</item>
+    </string-array>
+    <string-array name="countries">
+        <item>UNITED STATES OF AMERICA</item>
+        <item>CHINA (PEOPLES REPUBLIC)</item>
+        <item>TAIWAN</item>
+        <item>HONG KONG</item>
+        <item>ALBANIA </item>
+        <item>AMERICAN SAMOA</item>
+        <item>ANDORRA</item>
+        <item>ANGUILLA</item>
+        <item>ANTIGUA &amp; BARBUDA</item>
+        <item>ARUBA</item>
+        <item>AUSTRALIA</item>
+        <item>AUSTRIA</item>
+        <item>BAHRAIN</item>
+        <item>BARBADOS</item>
+        <item>BELGIUM</item>
+        <item>BELIZE</item>
+        <item>BENIN</item>
+        <item>BERMUDA</item>
+        <item>BOUVET ISLAND</item>
+        <item>BRAZIL</item>
+        <item>BRITISH INDIAN OCEAN TERRITORY</item>
+        <item>BRITISH VIRGIN ISLANDS</item>
+        <item>BULGARIA</item>
+        <item>CAYMAN ISLANDS</item>
+        <item>CHILE</item>
+        <item>COCOS (KEELING) ISLANDS</item>
+        <item>COOK ISLANDS</item>
+        <item>COSTA RICA</item>
+        <item>CURACAO</item>
+        <item>CZECH REPUBLIC</item>
+        <item>DENMARK</item>
+        <item>DOMINICA</item>
+        <item>DOMINICAN REPUBLIC</item>
+        <item>EL SALVADOR</item>
+        <item>FALKLAND ISLANDS</item>
+        <item>FAROE ISLANDS</item>
+        <item>FINLAND</item>
+        <item>FRANCE</item>
+        <item>FRENCH GUIANA</item>
+        <item>FRENCH POLYNESIA</item>
+        <item>GABON</item>
+        <item>GERMANY</item>
+        <item>GIBRALTER</item>
+        <item>GREECE</item>
+        <item>GREENLAND</item>
+        <item>GRENADA</item>
+        <item>GUADELOUPE</item>
+        <item>GUAM</item>
+        <item>GUINEA-BISSAU</item>
+        <item>HEARD ISL &amp; MCDONALD ISL</item>
+        <item>HONDURAS</item>
+        <item>HUNGARY</item>
+        <item>ICELAND</item>
+        <item>INDIA</item>
+        <item>IRELAND</item>
+        <item>ISRAEL</item>
+        <item>ITALY</item>
+        <item>JAMAICA</item>
+        <item>JAPAN</item>
+        <item>JORDAN</item>
+        <item>KIRIBATI</item>
+        <item>REPUBLIC OF KOREA (SOUTH)</item>
+        <item>KUWAIT</item>
+        <item>LIECHTENSTEIN</item>
+        <item>LITHUANIA</item>
+        <item>LUXEMBOURG</item>
+        <item>MALAYSIA</item>
+        <item>MALI</item>
+        <item>MALTA</item>
+        <item>MARSHALL ISLANDS</item>
+        <item>MARTINIQUE</item>
+        <item>MAURITIUS</item>
+        <item>MAYOTTE</item>
+        <item>MICRONESIA, FED STATES</item>
+        <item>MONACO</item>
+        <item>MOZAMBIQUE</item>
+        <item>N MARIANA ISLANDS</item>
+        <item>NAMIBIA</item>
+        <item>NETHERLANDS</item>
+        <item>NETHERLANDS ANTILLES</item>
+        <item>NEW CALEDONIA</item>
+        <item>NEW ZEALAND</item>
+        <item>NIUE</item>
+        <item>NORFOLK ISLAND</item>
+        <item>NORWAY</item>
+        <item>OMAN</item>
+        <item>PERU</item>
+        <item>PITCAIRN</item>
+        <item>POLAND</item>
+        <item>PORTUGAL</item>
+        <item>PUERTO RICO</item>
+        <item>QATAR</item>
+        <item>REUNION</item>
+        <item>ROMANIA</item>
+        <item>RWANDA</item>
+        <item>SAUDI ARABIA</item>
+        <item>SEYCHELLES</item>
+        <item>SINGAPORE</item>
+        <item>SLOVAKIA</item>
+        <item>SLOVENIA</item>
+        <item>SOUTH AFRICA</item>
+        <item>SPAIN</item>
+        <item>ST HELENA</item>
+        <item>ST KITTS AND NEVIS</item>
+        <item>ST LUCIA</item>
+        <item>ST VINCENT</item>
+        <item>SURINAME</item>
+        <item>SVALBARD</item>
+        <item>SWEDEN</item>
+        <item>SWITZERLAND</item>
+        <item>TOKELAU ISLANDS</item>
+        <item>TONGA</item>
+        <item>TUVALU</item>
+        <item>UNITED ARAB EMIRATES</item>
+        <item>UNITED KINGDOM</item>
+        <item>URUGUAY</item>
+        <item>VATICAN CITY</item>
+        <item>VIRGIN ISLANDS (USA)</item>
+        <item>WALLIS &amp; FUTUNA</item>
+        <item>WESTERN SAHARA</item>
+    </string-array>
+    <string-array name="employment_status">
+        <item>Employed</item>
+        <item>Self Employed</item>
+        <item>Unemployed</item>
+        <item>Student</item>
+        <item>Retired</item>
+    </string-array>
+    <string-array name="estimated_deposit">
+        <item>Less than $500</item>
+        <item>$500 ~ $1,999</item>
+        <item>$2,000 ~ $24,999</item>
+        <item>Above $25,000</item>
+    </string-array>
+    <string-array name="expected_withdrawal">
+        <item>Frequent</item>
+        <item>Occasional</item>
+        <item>Rare</item>
+    </string-array>
+    <string-array name="foreign_visa_type">
+        <item>A</item>
+        <item>B</item>
+        <item>F</item>
+        <item>G</item>
+        <item>J</item>
+        <item>M</item>
+        <item>O</item>
+        <item>P</item>
+        <item>Q</item>
+        <item>R</item>
+        <item>None</item>
+    </string-array>
+    <string-array name="income_source">
+        <item>Investments</item>
+        <item>Spouse</item>
+        <item>Rental</item>
+        <item>Social Security</item>
+        <item>Disability</item>
+        <item>Pension</item>
+        <item>Savings/Past Employment</item>
+        <item>Parents</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="investment_experience">
+        <item>None</item>
+        <item>Limited</item>
+        <item>Good</item>
+        <item>Extensive</item>
+    </string-array>
+    <string-array name="investment_objective">
+        <item>Capital Preservation</item>
+        <item>Income</item>
+        <item>Growth</item>
+        <item>Speculation</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="legal_residency">
+        <item>Permanent Resident</item>
+        <item>F</item>
+        <item>H</item>
+        <item>L</item>
+    </string-array>
+    <string-array name="liquid_net">
+        <item>Less than $50,000</item>
+        <item>$50,001 -$100,000</item>
+        <item>$100,001 -$200,000</item>
+        <item>$200,001 -$500,000</item>
+        <item>$500,001 -$1,000,000</item>
+        <item>$1,000,001 -$5,000,000</item>
+        <item>Above $5,000,001</item>
+    </string-array>
+    <string-array name="liquidity_need">
+        <item>Very Important</item>
+        <item>Somewhat Important</item>
+        <item>Not Important</item>
+    </string-array>
+    <string-array name="marital_status">
+        <item>Single</item>
+        <item>Married</item>
+        <item>Divorced</item>
+        <item>Widowed</item>
+    </string-array>
+    <string-array name="non_us_countries">
+        <item>CHINA (PEOPLES REPUBLIC)</item>
+        <item>TAIWAN</item>
+        <item>HONG KONG</item>
+        <item>ALBANIA </item>
+        <item>AMERICAN SAMOA</item>
+        <item>ANDORRA</item>
+        <item>ANGUILLA</item>
+        <item>ANTIGUA &amp; BARBUDA</item>
+        <item>ARUBA</item>
+        <item>AUSTRALIA</item>
+        <item>AUSTRIA</item>
+        <item>BAHRAIN</item>
+        <item>BARBADOS</item>
+        <item>BELGIUM</item>
+        <item>BELIZE</item>
+        <item>BENIN</item>
+        <item>BERMUDA</item>
+        <item>BOUVET ISLAND</item>
+        <item>BRAZIL</item>
+        <item>BRITISH INDIAN OCEAN TERRITORY</item>
+        <item>BRITISH VIRGIN ISLANDS</item>
+        <item>BULGARIA</item>
+        <item>CAYMAN ISLANDS</item>
+        <item>CHILE</item>
+        <item>COCOS (KEELING) ISLANDS</item>
+        <item>COOK ISLANDS</item>
+        <item>COSTA RICA</item>
+        <item>CURACAO</item>
+        <item>CZECH REPUBLIC</item>
+        <item>DENMARK</item>
+        <item>DOMINICA</item>
+        <item>DOMINICAN REPUBLIC</item>
+        <item>EL SALVADOR</item>
+        <item>FALKLAND ISLANDS</item>
+        <item>FAROE ISLANDS</item>
+        <item>FINLAND</item>
+        <item>FRANCE</item>
+        <item>FRENCH GUIANA</item>
+        <item>FRENCH POLYNESIA</item>
+        <item>GABON</item>
+        <item>GERMANY</item>
+        <item>GIBRALTER</item>
+        <item>GREECE</item>
+        <item>GREENLAND</item>
+        <item>GRENADA</item>
+        <item>GUADELOUPE</item>
+        <item>GUAM</item>
+        <item>GUINEA-BISSAU</item>
+        <item>HEARD ISL &amp; MCDONALD ISL</item>
+        <item>HONDURAS</item>
+        <item>HUNGARY</item>
+        <item>ICELAND</item>
+        <item>INDIA</item>
+        <item>IRELAND</item>
+        <item>ISRAEL</item>
+        <item>ITALY</item>
+        <item>JAMAICA</item>
+        <item>JAPAN</item>
+        <item>JORDAN</item>
+        <item>KIRIBATI</item>
+        <item>REPUBLIC OF KOREA (SOUTH)</item>
+        <item>KUWAIT</item>
+        <item>LIECHTENSTEIN</item>
+        <item>LITHUANIA</item>
+        <item>LUXEMBOURG</item>
+        <item>MALAYSIA</item>
+        <item>MALI</item>
+        <item>MALTA</item>
+        <item>MARSHALL ISLANDS</item>
+        <item>MARTINIQUE</item>
+        <item>MAURITIUS</item>
+        <item>MAYOTTE</item>
+        <item>MICRONESIA, FED STATES</item>
+        <item>MONACO</item>
+        <item>MOZAMBIQUE</item>
+        <item>N MARIANA ISLANDS</item>
+        <item>NAMIBIA</item>
+        <item>NETHERLANDS</item>
+        <item>NETHERLANDS ANTILLES</item>
+        <item>NEW CALEDONIA</item>
+        <item>NEW ZEALAND</item>
+        <item>NIUE</item>
+        <item>NORFOLK ISLAND</item>
+        <item>NORWAY</item>
+        <item>OMAN</item>
+        <item>PERU</item>
+        <item>PITCAIRN</item>
+        <item>POLAND</item>
+        <item>PORTUGAL</item>
+        <item>PUERTO RICO</item>
+        <item>QATAR</item>
+        <item>REUNION</item>
+        <item>ROMANIA</item>
+        <item>RWANDA</item>
+        <item>SAUDI ARABIA</item>
+        <item>SEYCHELLES</item>
+        <item>SINGAPORE</item>
+        <item>SLOVAKIA</item>
+        <item>SLOVENIA</item>
+        <item>SOUTH AFRICA</item>
+        <item>SPAIN</item>
+        <item>ST HELENA</item>
+        <item>ST KITTS AND NEVIS</item>
+        <item>ST LUCIA</item>
+        <item>ST VINCENT</item>
+        <item>SURINAME</item>
+        <item>SVALBARD</item>
+        <item>SWEDEN</item>
+        <item>SWITZERLAND</item>
+        <item>TOKELAU ISLANDS</item>
+        <item>TONGA</item>
+        <item>TUVALU</item>
+        <item>UNITED ARAB EMIRATES</item>
+        <item>UNITED KINGDOM</item>
+        <item>URUGUAY</item>
+        <item>VATICAN CITY</item>
+        <item>VIRGIN ISLANDS (USA)</item>
+        <item>WALLIS &amp; FUTUNA</item>
+        <item>WESTERN SAHARA</item>
+    </string-array>
+    <string-array name="number_trades_year">
+        <item>1 ~ 9</item>
+        <item>10 ~ 14</item>
+        <item>15 ~ 24</item>
+        <item>25 ~ 74</item>
+        <item>75+</item>
+    </string-array>
+    <string-array name="option_level_cash">
+        <item>Level 1</item>
+        <item>Level 2</item>
+    </string-array>
+    <string-array name="option_level_margin">
+        <item>Level 1</item>
+        <item>Level 2</item>
+        <item>Level 3</item>
+        <item>Level 4</item>
+        <item>Level 5</item>
+        <item>Level 6</item>
+    </string-array>
+    <string-array name="position_title">
+        <item>Accountant</item>
+        <item>Analyst</item>
+        <item>Architect</item>
+        <item>Assistant/Clerk/Associate</item>
+        <item>Attorney</item>
+        <item>Chef/Waiter</item>
+        <item>Consultant</item>
+        <item>Customer Service</item>
+        <item>Designer</item>
+        <item>Director</item>
+        <item>Engineer/Technician</item>
+        <item>Manager</item>
+        <item>Medical Personnel</item>
+        <item>Sales</item>
+        <item>Teacher</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="relationship_array">
+        <item>Self</item>
+        <item>Spouse</item>
+        <item>Parent</item>
+        <item>Child</item>
+        <item>Relative</item>
+        <item>Business Associate</item>
+    </string-array>
+    <string-array name="relationship_joint">
+        <item>Friend</item>
+        <item>Spouse</item>
+        <item>Family</item>
+        <item>Co-worker</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="risk_tolerance">
+        <item>Low (Ineligible for Margin Account)</item>
+        <item>Medium</item>
+        <item>High</item>
+    </string-array>
+    <string-array name="security_question">
+        <item>What are the last 4 digits of your SSN?</item>
+        <item>What is your pet\'s name?</item>
+        <item>What city were you born in?</item>
+        <item>What is your favorite sport team?</item>
+    </string-array>
+    <string-array name="size_of_transaction">
+        <item>$0 ~ $9,999</item>
+        <item>$10,000 ~ $24,999</item>
+        <item>$25,000+</item>
+    </string-array>
+    <string-array name="source_array">
+        <item>Camera</item>
+        <item>Gallery</item>
+    </string-array>
+    <string-array name="source_deposit">
+        <item>Account Transfer</item>
+        <item>Wire</item>
+        <item>Physical Certificate</item>
+    </string-array>
+    <string-array name="states">
+        <item>AA</item>
+        <item>AE</item>
+        <item>AK</item>
+        <item>AL</item>
+        <item>AP</item>
+        <item>AR</item>
+        <item>AZ</item>
+        <item>CA</item>
+        <item>CO</item>
+        <item>CT</item>
+        <item>DC</item>
+        <item>DE</item>
+        <item>FL</item>
+        <item>GA</item>
+        <item>HI</item>
+        <item>IA</item>
+        <item>ID</item>
+        <item>IL</item>
+        <item>IN</item>
+        <item>KS</item>
+        <item>KY</item>
+        <item>LA</item>
+        <item>MA</item>
+        <item>ME</item>
+        <item>MD</item>
+        <item>MI</item>
+        <item>MN</item>
+        <item>MO</item>
+        <item>MS</item>
+        <item>MT</item>
+        <item>NC</item>
+        <item>ND</item>
+        <item>NE</item>
+        <item>NH</item>
+        <item>NJ</item>
+        <item>NM</item>
+        <item>NV</item>
+        <item>NY</item>
+        <item>OH</item>
+        <item>OK</item>
+        <item>OR</item>
+        <item>PA</item>
+        <item>PR</item>
+        <item>RI</item>
+        <item>SC</item>
+        <item>SD</item>
+        <item>TN</item>
+        <item>TX</item>
+        <item>UT</item>
+        <item>VA</item>
+        <item>VT</item>
+        <item>WA</item>
+        <item>WI</item>
+        <item>WV</item>
+        <item>WY</item>
+    </string-array>
+    <string-array name="suffix">
+        <item>Jr</item>
+        <item>Sr</item>
+        <item>I</item>
+        <item>II</item>
+        <item>III</item>
+        <item>IV</item>
+        <item>V</item>
+        <item>VI</item>
+    </string-array>
+    <string-array name="tax_bracket">
+        <item>10%</item>
+        <item>12%</item>
+        <item>22%</item>
+        <item>24%</item>
+        <item>32%</item>
+        <item>35%</item>
+        <item>37%</item>
+    </string-array>
+    <string-array name="time_horizon">
+        <item>Short (Less than 3 Years)</item>
+        <item>Average (4 to 7 Years)</item>
+        <item>Longest (8 years or more)</item>
+    </string-array>
+    <string-array name="title">
+        <item>Mr</item>
+        <item>Mrs</item>
+        <item>Ms</item>
+        <item>Miss</item>
+        <item>Dr</item>
+    </string-array>
+    <string-array name="type_of_business">
+        <item>Accounting</item>
+        <item>Banking</item>
+        <item>Communication/Networking</item>
+        <item>Construction</item>
+        <item>Education</item>
+        <item>Engineering</item>
+        <item>Finance &amp; Insurance</item>
+        <item>Food &amp; Hospitality</item>
+        <item>Government</item>
+        <item>Medical &amp; Health Services</item>
+        <item>Import &amp; Export</item>
+        <item>IT Services/Software</item>
+        <item>Manufacturing</item>
+        <item>Marketing</item>
+        <item>Media</item>
+        <item>Real Estate &amp; Housing</item>
+        <item>Retail/Wholesale</item>
+        <item>Safety/Security &amp; Legal</item>
+        <item>Transportation</item>
+        <item>Travel Services</item>
+        <item>Other</item>
+    </string-array>
+    <color name="abs_holo_blue_light">#ff33b5e5</color>
+    <color name="account_green">#319D67</color>
+    <color name="action_mode_background">#616161</color>
+    <color name="bpBlue">#33b5e5</color>
+    <color name="bpDarkWhite">#A0A0A0</color>
+    <color name="bpDark_gray">#363636</color>
+    <color name="bpDarker_blue">#0099cc</color>
+    <color name="bpWhite">#ffffff</color>
+    <color name="bpblack">#ff000000</color>
+    <color name="colorAccent">#90A52A</color>
+    <color name="colorPrimary">#00FF00</color>
+    <color name="colorPrimaryDark">#FF0000</color>
+    <color name="debit_red">#c11b17</color>
+    <color name="light_gray">#FFAAAAAA</color>
+    <color name="quote_262626gray">#262626</color>
+    <color name="theme_accent">#FFAB00</color>
+    <color name="theme_primary">#090b5e</color>
+    <color name="theme_primary_dark">#090b5e</color>
+    <color name="transparent">#00000000</color>
+    <dimen name="calendar_text_small">14sp</dimen>
+    <dimen name="elevation_default">5dp</dimen>
+    <dimen name="open_account_margins">15dp</dimen>
+    <dimen name="open_account_note_margin">5dp</dimen>
+    <string name="action_settings">Settings</string>
+    <string name="add_new_beneficiary">+ Add new beneficiary</string>
+    <string name="address">Permanent Address</string>
+    <string name="address_empty_alert">Address 1 cannot be empty</string>
+    <string name="agree">Agreed</string>
+    <string name="alternate_beneficiary">Alternate Beneficiaries</string>
+    <string name="alternate_beneficiary_max_alert">Only can add up to 2 Alternate Beneficiary</string>
+    <string name="alternate_beneficiary_note">If none of the above-named Primary Beneficiaries survives me, pay any interest I may have in my Custodial Account in equal proportions unless otherwise indicated to the following Alternate Beneficiary or Beneficiaries of the survivor(s) thereof</string>
+    <string name="alternative_beneficiary_alert">Please add a primary beneficiary first before adding an alternate beneficiary</string>
+    <string name="alternative_beneficiary_share_total_100_percent_alert">Alternate Beneficiary(ies) share totals must equal 100%</string>
+    <string name="apex_customer_agreement">Apex Customer Account Agreement (PDF)</string>
+    <string name="back">Back</string>
+    <string name="beneficiary">Beneficiary</string>
+    <string name="beneficiary_max_note">If you need to add more than 3 primary beneficiaries or more than 2 alternate beneficiaries, please contact us once your IRA account is established</string>
+    <string name="beneficiary_relationship">Relationship to account holder</string>
+    <string name="btn_acat_choose_file">Choose File</string>
+    <string name="btn_hint_select">Select…</string>
+    <string name="btn_step8_open_account">Open Account</string>
+    <string name="btn_submit">Submit</string>
+    <string name="buesiness_plan_statement">Business Continuity Plan Statement (PDF)</string>
+    <string name="city_empty_alert">City cannot be empty</string>
+    <string name="content_desc_pin_ok">Okay</string>
+    <string name="country_empty_alert">Country cannot be empty</string>
+    <string name="customer_agreement">SogoTrade Customer Account Agreement (PDF)</string>
+    <string name="customer_margin">Customer Margin and Short Account Agreement (PDF)</string>
+    <string name="day_trading_disclosure">Day Trading Risk Disclosure (PDF)</string>
+    <string name="delete">Delete</string>
+    <string name="digit_zero_text">+</string>
+    <string name="digits_letter_number_underdash_userID">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890_</string>
+    <string name="digits_letters_for_names">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-</string>
+    <string name="digits_letters_numbers">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890</string>
+    <string name="digits_letters_numbers_FTIN_Zip">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890-</string>
+    <string name="digits_only_letters">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz</string>
+    <string name="digits_only_numbers">1234567890</string>
+    <string name="digtis_letters_dot_forSymbolUse">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz.</string>
+    <string name="dob_empty_alert">Date of birth cannot be empty</string>
+    <string name="dob_note">*Must be 18 or older to open an account*</string>
+    <string name="done_label">Done</string>
+    <string name="e_sign_agreement">E-Signature and Electronic Disclosure Agreement (PDF)</string>
+    <string name="empty_share_percentage_alert">Sharing percentage cannot be empty</string>
+    <string name="expiration_date">Expiration Date</string>
+    <string name="extended_hour">SogoTrade Extended Hours Risk Disclosure (PDF)</string>
+    <string name="form_w8">Form W-8BEN</string>
+    <string name="form_w9">Form W9</string>
+    <string name="ftin_notice">If the FTIN is missing, you may get a higher tax withholding rate</string>
+    <string name="hint_FTIN">FTIN</string>
+    <string name="hint_address_line1">Address Line 1</string>
+    <string name="hint_address_line2">Address Line 2</string>
+    <string name="hint_city">City</string>
+    <string name="hint_country">Country</string>
+    <string name="hint_joint_citizenship">Citizenship</string>
+    <string name="hint_other_type_business_specify">Please Specify</string>
+    <string name="hint_relationship_to_primary">Relationship to primary owner</string>
+    <string name="hint_state">State</string>
+    <string name="hint_step2_first_name">First Name</string>
+    <string name="hint_step2_last_name">Last Name</string>
+    <string name="hint_step2_middle_name">Middle Name (Optional)</string>
+    <string name="hint_step2_suffix">Suffix (Optional)</string>
+    <string name="hint_step4_company_add1">Company Address Line 1</string>
+    <string name="hint_step4_company_add2">Company Address Line 2 (Optional)</string>
+    <string name="hint_step4_company_business_phone">Business Phone</string>
+    <string name="hint_step4_company_city">Company City</string>
+    <string name="hint_step4_company_country">Company Country</string>
+    <string name="hint_step4_company_length_employment">Length of Employment (Years)</string>
+    <string name="hint_step4_company_name">Company Name</string>
+    <string name="hint_step4_company_position">Position/Title</string>
+    <string name="hint_step4_company_state">Company State</string>
+    <string name="hint_step4_company_state_province">State/Province (Optional)</string>
+    <string name="hint_step4_company_type_business">Type of Business</string>
+    <string name="hint_step5_primary_phone">Primary Phone Number</string>
+    <string name="hint_step5_trusted_contact_relation">Relationship to Primary Applicant</string>
+    <string name="hint_step6_firm_name">Firm Name</string>
+    <string name="hint_step6_name">Name</string>
+    <string name="hint_step6_organization_name">Organization Name</string>
+    <string name="hint_step6_political_title">Political Title</string>
+    <string name="hint_step6_relationship_to_owner">Relationship to Account Owner</string>
+    <string name="hint_step7_primary_bank_name">Primary Bank Name</string>
+    <string name="hint_step8_confirm_email">Confirm Email</string>
+    <string name="hint_step8_email">Email Address</string>
+    <string name="hint_step8_password">Enter Password</string>
+    <string name="hint_step8_pin">Enter PIN</string>
+    <string name="hint_step8_security_answer">Answer</string>
+    <string name="hint_step8_security_question">Select a security question</string>
+    <string name="hint_step8_userID">Enter Preferred User ID</string>
+    <string name="hint_title">Title</string>
+    <string name="hint_zip">Zip Code</string>
+    <string name="invalid_margin_alert">0 Year Invalid for Margin</string>
+    <string name="joint_account_type">Joint Tenants with Rights of Survivorship (JTWROS)</string>
+    <string name="joint_applicant">Joint Applicant</string>
+    <string name="joint_signature_empty_alert">Joint applicant signature cannot be empty</string>
+    <string name="label_FTIN">I have a Foreign Tax Identification Number (FTIN)</string>
+    <string name="label_cancel">Cancel</string>
+    <string name="label_default_dash">-</string>
+    <string name="label_domestic_account">
+        <![CDATA[
+                        <p><b> This means I am one of the following: </b></p>
+                        <li>A U.S. citizen</li>
+                        <li>A permanent resident (green card holder)</li>
+                        <li>A U.S. visa holder (E, F, H, or L)</li>
+                        <p><b> You MUST have a valid US social security number (SSN) to open an account as a US resident.</b></p>
+                        <p><b>Here are what you will need to open a SogoTrade account:</b></p>
+                        <li>If you have only an individual tax identification number (ITIN), choose the "No" button above and open the account as a non-U.S. resident.</li>
+                        <li>If applying for a Traditional, Roth, or Rollover IRA, the SSN for each of your named beneficiaries (if you don"t have this information you can skip the beneficiary designation section and provide this information at a later date) </li>
+        ]]>
+    </string>
+    <string name="label_empty"/>
+    <string name="label_foreign_account">
+        <![CDATA[
+                        "<p><b> This means I do not have a U.S. social security number (SSN) and that one of the following applies: </b></p>"
+                        "<li>I am not a US citizen</li>"
+                        "<li>I am not a permanent resident (green card holder)</li>"
+                        "<li>I have a valid U.S. visa (A, B, F, G, J, O, P, or R)</li>"
+                        "<p><b>Here are what you will need to open a SogoTrade account:</b></p>"
+                        "<li>A copy of your valid (unexpired) resident photo ID or passport</li>"
+                        "<li>Proof of address dated within the past 3 months (such as utility bill)</li>"
+        ]]>
+    </string>
+    <string name="label_legal_resident">Are you a legal U.S. resident?</string>
+    <string name="label_margin_senior_note">
+        Having a margin account offers benefits. However, a margin loan is financed by using the securities in the account as the collateral.
+        Given the value of securities can fluctuate quickly and dramatically, relative to other types of assets, margin loans introduce more risk to your account.
+        It is even possible to lose more money than you have on deposit.\n\nFor this reason, both the Financial Industry Regulatory Authority (FINRA) and the Securities and Exchange Commission (SEC) have concerns about senior investors using margin and require us to issue this warning.
+        \n\nPlease Agree to confirm you acknowledge and understand the risks of using margin.\n\n**If you disagree, we will process this application as CASH account with option trading level 2 the highest possible (If applicable)**
+    </string>
+    <string name="label_no">No</string>
+    <string name="label_pin_format">PIN number must be between 4 to 6 digits</string>
+    <string name="label_row_description_symbol">Symbol</string>
+    <string name="label_step2_date_of_birth">Date of birth</string>
+    <string name="label_step2_female">Female</string>
+    <string name="label_step2_gender">Gender :</string>
+    <string name="label_step2_male">Male</string>
+    <string name="label_step2_page_notice">All fields are required unless indicated optional</string>
+    <string name="label_step3_acc_feature">Account Features:</string>
+    <string name="label_step3_acc_type">Account Type</string>
+    <string name="label_step3_avg_option_trade">Average Number of Options Trades/Year</string>
+    <string name="label_step3_avg_stock_trade">Average Number of Stock Trades/Year</string>
+    <string name="label_step3_cash_question_content">The settlement period for stock trades is Trade Date + 2 business days.</string>
+    <string name="label_step3_margin_notice">*Must be 20 or older to open a Margin Account*</string>
+    <string name="label_step3_margin_question_content">
+        Allows you to increase your purchasing power, diversify your portfolio, and hedge against risk by borrowing against holdings in your account that act as collateral.
+        A $2,000 balance must be maintained if you wish to borrow funds on Margin. Note: No interest charges will apply unless holding a debit balance.</string>
+    <string name="label_step3_option_level">Option Level</string>
+    <string name="label_step3_option_level_question_content">Level 1: Write Covered Calls.\nLevel 2: Purchase Options.\nLevel 3: Create Spreads.\nLevel 4: Write Uncovered Puts.\nLevel 5: Write Uncovered Calls.\nLevel 6: Naked Index Calls/Puts.
+    </string>
+    <string name="label_step3_option_trading">Option Trading</string>
+    <string name="label_step3_option_trading_question_content">
+        Allows you to invest in call and put options so that you can create strategies that can potentially generate income and manage risk.
+    </string>
+    <string name="label_step3_size_of_option_transaction">Typical Size of Options Transactions</string>
+    <string name="label_step3_size_of_transaction">Typical Size of Transactions</string>
+    <string name="label_step3_year_of_investing_option">Years of Investing Options</string>
+    <string name="label_step3_year_of_investing_stock">Years of Investing Stocks</string>
+    <string name="label_step4_company_personal_use">I (We) certify this account is for our personal use</string>
+    <string name="label_step4_dependent_notice">*Dependents including yourself</string>
+    <string name="label_step4_dependents">Number of Dependents</string>
+    <string name="label_step4_employed">Please provide below information</string>
+    <string name="label_step4_employment_status">Employment Status</string>
+    <string name="label_step4_income_source">Primary Income Source</string>
+    <string name="label_step4_marital_status">Marital Status</string>
+    <string name="label_step4_ssn">SSN</string>
+    <string name="label_step5_add_trusted_contact">Add a trusted contact person</string>
+    <string name="label_step5_alternate_phone">Alternate Phone Number (Optional)</string>
+    <string name="label_step5_mailing_address">Mailing Address is different from permanent residence address</string>
+    <string name="label_step5_reason_nonUS">Reason for using a non US address:</string>
+    <string name="label_step5_trusted_contact_address">Trusted Contact\'s Mailing Address (Optional)</string>
+    <string name="label_step5_trusted_contact_notice">Name &amp; Relationship are required. Either email or phone is also required. Address is optional.</string>
+    <string name="label_step5_trusted_contact_popup_text">
+        Trusted Contact Person (optional).
+        If you provide a Trusted Contact Person, you authorize us to contact and disclose information about your account in order to confirm your current contact information, health status, and the identity of any legal guardian, executor, trustee, or holder of a power of attorney.
+        The Trusted Contact Person should not be someone already listed on the account.
+    </string>
+    <string name="label_step6_first">Are you or a member of your household a director, 10% shareholder or officer of a public traded company?</string>
+    <string name="label_step6_second">Are you or a member of your immediately family associated with or employed by a stock exchange,
+        exchange member, FINRA, or registered broker / dealer?</string>
+    <string name="label_step6_third">Are you or a member of your immediately family or any of your personal or business associates a current or former
+        senior political figure (SPF) or politically exposed person (PEP)?</string>
+    <string name="label_step7_annual_income">Annual Income (USD$)</string>
+    <string name="label_step7_estimated_deposit">Estimated Initial Deposit (USD$)</string>
+    <string name="label_step7_expected_withdrawals">Expected Withdrawals</string>
+    <string name="label_step7_experience">Investment Experience</string>
+    <string name="label_step7_investment_experience_alert">Margin accounts cannot select "None" or "Limited" for Investment Experience</string>
+    <string name="label_step7_investment_objective_alert">Margin accounts cannot select Capital Preservation</string>
+    <string name="label_step7_liquid_net">Liquid Net Worth (USD$)</string>
+    <string name="label_step7_liquidity_alert">Margin accounts cannot select "Very Important" for Liquidity Needs</string>
+    <string name="label_step7_liquidity_need">Liquidity Needs</string>
+    <string name="label_step7_objective">Investment Objective</string>
+    <string name="label_step7_question_liquid_net">Including cash (and equivalents), stocks, bonds and bank deposits, minus any liabilities.</string>
+    <string name="label_step7_question_liquidity_need">The ability to quickly and easily covert all or a portion of the account assets into cash without experiencing significant loss.</string>
+    <string name="label_step7_question_time_horizon">The number of years planned to invest to achieve a particular financial goal.</string>
+    <string name="label_step7_question_total_net">Total of all assets including liquid assets, real estate, personal property and etc minus total liabilities.</string>
+    <string name="label_step7_risk_alert">Margin accounts cannot select a low risk tolerance</string>
+    <string name="label_step7_risk_tolerance">Risk Tolerance</string>
+    <string name="label_step7_source_of_deposit">Source of Initial Deposit</string>
+    <string name="label_step7_tax_bracket">Tax Bracket</string>
+    <string name="label_step7_time_horizon">Time Horizon</string>
+    <string name="label_step7_title_1">Investment Profile</string>
+    <string name="label_step7_title_2">Suitability Profile</string>
+    <string name="label_step7_total_net">Total Net Worth (USD$)</string>
+    <string name="label_step8_agreement">I AGREE. By checking this box, I am signing the Complete Account Agreement and acknowledging receipt of the disclosures.</string>
+    <string name="label_step8_email_alert">Confirm email does not match</string>
+    <string name="label_upload_joint_applicant">Co-holder Identification</string>
+    <string name="label_upload_passport">Valid Passport</string>
+    <string name="label_upload_primary_applicant">Primary Applicant Identification</string>
+    <string name="label_upload_proof_address">Proof of address dated within 3 months</string>
+    <string name="label_upload_proof_address_co_holder">Proof of address dated within 3 months (If different than primary holder\'s address)</string>
+    <string name="label_yes">Yes</string>
+    <string name="legal_residency_status">Legal Residency Status</string>
+    <string name="margin_disclosure">Margin Disclosure Document (PDF)</string>
+    <string name="names_empty_alert">First and Last name cannot be empty</string>
+    <string name="new_account_Country">Country</string>
+    <string name="new_account_step1">Step 1</string>
+    <string name="not_agree">Not Agreed</string>
+    <string name="option_agreement">Option Agreement (PDF)</string>
+    <string name="password_digits_alert">Password must be within 6 to 16 characters</string>
+    <string name="permament_address_state">Please select your permanent address state</string>
+    <string name="phone_size_alert">Must be at least 10 digits</string>
+    <string name="pink_sheet">Pink Sheet Disclosure (PDF)</string>
+    <string name="please_sign_below">Please sign below</string>
+    <string name="primary_beneficiary">Primary Beneficiaries</string>
+    <string name="primary_beneficiary_max_alert">Only can add up to 3 Primary Beneficiary</string>
+    <string name="primary_beneficiary_note">I hereby make the following designation of beneficiary pursuant to the provisions of the Apex Clearing Corporation Custodial Agreement: In the event of my death, pay any interest I may have in my Custodial Account in equal proportions unless otherwise indicated to the following Primary Beneficiary or Beneficiaries:</string>
+    <string name="primary_beneficiary_share_total_100_percent_alert">Primary Beneficiary(ies) share totals must equal 100%</string>
+    <string name="privacy_policy">SogoTrade Privacy Policy (PDF)</string>
+    <string name="public_trade_symbol_question">Is this a publicly traded company on a US exchange?</string>
+    <string name="question_mark">\?</string>
+    <string name="radio_cash_account">Cash Account</string>
+    <string name="radio_margin_account">Margin Account</string>
+    <string name="reason_for_using_a_u_s_mailing_address">Reason for using a U.S. mailing address</string>
+    <string name="relationship_empty_alert">Relationship cannot be empty</string>
+    <string name="rollover_IRA">Rollover Individual Retirement Custodial Account Agreement (PDF)</string>
+    <string name="roth_IRA">ROTH Individual Retirement Custodial Account Agreement (PDF)</string>
+    <string name="select_country_residency">Please select your country residence</string>
+    <string name="select_source_title">Select Source</string>
+    <string name="select_visa_type_title">Please select your visa type</string>
+    <string name="senior_margin_title">Senior Margin Account Notice</string>
+    <string name="share_percentage">Share percentage %</string>
+    <string name="share_percentage_alert">You have reached 100% share percentage, no more beneficiary can be added</string>
+    <string name="share_percentage_one_hundred_alert">Sharing percentage cannot larger than 100%</string>
+    <string name="signature_cancel_button">Cancel</string>
+    <string name="signature_clear_button">Clear</string>
+    <string name="signature_empty_alert">Signature cannot be empty</string>
+    <string name="singature_save_button">Save</string>
+    <string name="ssn_invalid_alert">SSN you entered is not valid</string>
+    <string name="standardized_option">Characteristics and Risks of Standardized Options (PDF)</string>
+    <string name="state_empty_alert">State cannot be empty</string>
+    <string name="step2">Step 2</string>
+    <string name="step3">Step 3</string>
+    <string name="step4">Step 4</string>
+    <string name="step5">Step 5</string>
+    <string name="step6">Step 6</string>
+    <string name="step7">Step 7</string>
+    <string name="step8">Step 8</string>
+    <string name="step8_account_created_message">Your application is currently being reviewed and it will be fully activated within 1 ~ 2 days. We will contact you if additional supporting documentation is required.\nOnce Again, thank you for choosing SogoTrade. Your business is appreciated.</string>
+    <string name="step8_account_created_title">Application Submitted</string>
+    <string name="step8_agreement_content_1">Please read carefully the following documents, which together are referred to as the “Complete Account Agreement” and will govern SogoTrade’s brokerage account relationship with you:</string>
+    <string name="step8_agreement_content_2">By checking the “I AGREE” box below, you:</string>
+    <string name="step8_agreement_content_3">Affirm that you have received and read the Complete Account Agreement and agree to be bound by the terms and conditions, as may be amended from time to time in accordance with the terms therein.</string>
+    <string name="step8_agreement_content_4">Acknowledge receipt of the following disclosures</string>
+    <string name="step8_agreement_content_5">Acknowledge that your Complete Account Agreement contains an arbitration clause in Section 22 of the SogoTrade Customer Account Agreement</string>
+    <string name="step8_agreement_content_6">Affirm under penalty of perjury that: (1) the information contained in your</string>
+    <string name="step8_agreement_content_7">contains your correct taxpayer identification number and address; (2) you are not subject to backup withholding; and (3) you are a U.S. citizen or other U.S. person. The IRS does not require your consent to any provision of this document other than the certification required to avoid backup withholding.</string>
+    <string name="step8_agreement_content_8">Affirm that you are of legal age to agree to the terms of the Complete Account Agreement and that you will be providing an electronic signature as part of the Complete Account Agreement, which is the equivalent of a written signature.</string>
+    <string name="step8_personal_phrase">Personal Phrase</string>
+    <string name="step8_submit_application">Uploading your application…</string>
+    <string name="traditional_IRA">Traditional Individual Retirement Custodial Account Agreement (PDF)</string>
+    <string name="up_to_three">(Up to 3)</string>
+    <string name="up_to_two">(Up to 2)</string>
+    <string name="upload_document">Upload Document</string>
+    <string name="upload_files_message">Uploading your files…</string>
+    <string name="usa">UNITED STATES OF AMERICA</string>
+    <string name="uv_email_address">Email address</string>
+    <string name="uv_next">Next</string>
+    <string name="visa_type">Visa Type</string>
+    <string name="website_terms">SogoTrade Website Terms of Use (PDF)</string>
+    <string name="zero_share_percentage_alert">Sharing percentage cannot be 0</string>
+    <string name="zip_code_alert">Please provide 5 digit zip code</string>
+    <string name="zip_code_empty_alert">Zip code cannot be empty</string>
+    <style name="ActionMenuText" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:actionBarSize">35dp</item>
+        <item name="actionBarSize">35dp</item>
+        <!-- Set AppCompat’s color theming attrs -->
+        <item name="colorPrimary">@color/theme_primary</item>
+        <item name="colorPrimaryDark">@color/theme_primary_dark</item>
+        <item name="colorAccent">@color/theme_accent</item>
+        <!-- The rest of your attributes -->
+        <item name="actionModeBackground">@color/action_mode_background</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="colorButtonNormal">#FFAB00</item>
+        <item name="actionMenuTextAppearance">@style/ActionMenuText</item>
+
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:itemBackground">@color/bpDark_gray</item>
+    </style>
+    <style name="AppTheme.NoActionBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="DatePickerStyle" parent="@android:style/Widget.Material.Light.DatePicker">
+        <item name="android:datePickerMode">spinner</item>
+    </style>
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@android:color/white</item>
+    </style>
+    <style name="MyDialogTheme" parent="Theme.AppCompat.Dialog.Alert"/>
+    <style name="SpinnerDatePickerDialogTheme" parent="Theme.AppCompat.DayNight.Dialog">
+        <item name="android:datePickerStyle">@style/DatePickerStyle</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textColorSecondary">@android:color/black</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <style name="popup_window">
+        <item name="android:windowEnterAnimation">@anim/custom_fade_in</item>
+        <item name="android:windowExitAnimation">@anim/custom_fade_out</item>
+    </style>
+    <declare-styleable name="textViewSpinner">
+        <attr name="android:prompt"/>
+        <attr name="android:entries"/>
+    </declare-styleable>
+</resources>

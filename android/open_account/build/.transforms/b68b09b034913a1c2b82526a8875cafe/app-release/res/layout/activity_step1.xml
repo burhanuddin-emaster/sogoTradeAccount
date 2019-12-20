@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ui.open_account.Step1">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/new_account_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="?attr/colorPrimary"
+        app:elevation="@dimen/elevation_default"
+        app:layout_scrollFlags="enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <Button
+            android:id="@+id/btn_new_account_back"
+            android:layout_width="60dp"
+            android:background="@color/transparent"
+            android:drawableStart="@drawable/arrowleft"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:text="@string/back"
+            android:drawableTint="@color/theme_accent"
+            android:textColor="@color/theme_accent"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:text="@string/new_account_step1"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/bpWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/new_account1_next_button"
+            android:text="@string/uv_next"
+            android:textAllCaps="false"
+            android:layout_gravity="end"
+            android:background="@color/transparent"
+            android:textColor="@color/theme_accent"
+            android:layout_width="60dp"
+            android:layout_height="match_parent" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_below="@id/new_account_toolbar"
+        android:padding="@dimen/open_account_margins"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/id_new_account_legal_resident"
+                android:text="@string/label_legal_resident"
+                android:textColor="@color/bpblack"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:padding="5dp"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:id="@+id/new_account1_radiobtn_view"
+                android:layout_below="@id/id_new_account_legal_resident"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/new_account1_radio_btn_yes"
+                    android:text="@string/label_yes"
+                    android:textColor="@color/bpblack"
+                    android:buttonTint="@color/bpblack"
+                    android:layout_marginEnd="@dimen/open_account_margins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <RadioButton
+                    android:id="@+id/new_account1_radio_btn_no"
+                    android:text="@string/label_no"
+                    android:textColor="@color/bpblack"
+                    android:layout_toEndOf="@id/new_account1_radio_btn_yes"
+                    android:buttonTint="@color/bpblack"
+                    android:layout_marginStart="@dimen/open_account_margins"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_below="@id/new_account1_radiobtn_view"
+                android:padding="@dimen/open_account_margins"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <WebView
+                    android:id="@+id/new_account_web_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/step3_main_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    tools:context="com.example.ui.open_account.Step3">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/step3_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="?attr/colorPrimary"
+        app:elevation="@dimen/elevation_default"
+        app:layout_scrollFlags="enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <Button
+            android:id="@+id/btn_step3_back"
+            android:layout_width="60dp"
+            android:background="@color/transparent"
+            android:drawableStart="@drawable/arrowleft"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:text="@string/back"
+            android:drawableTint="@color/theme_accent"
+            android:textColor="@color/theme_accent"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:text="@string/step3"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/bpWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/step3_next_button"
+            android:text="@string/uv_next"
+            android:textAllCaps="false"
+            android:layout_gravity="end"
+            android:background="@color/transparent"
+            android:textColor="@color/theme_accent"
+            android:layout_width="60dp"
+            android:layout_height="match_parent" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ScrollView
+        android:id="@+id/step3_scrollview"
+        android:layout_below="@id/step3_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/step2_inner_content"
+            android:layout_width="match_parent"
+            android:padding="@dimen/open_account_margins"
+            android:layout_height="wrap_content">
+
+            <com.example.util.textViewSpinner
+                android:id="@+id/step3_account_type_spinner"
+                android:background="@drawable/custom_white_background"
+                android:textColor="@color/bpblack"
+                android:hint="@string/label_step3_acc_type"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:visibility="visible"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/step3_joint_radio_button"
+                android:text="@string/joint_account_type"
+                android:layout_below="@id/step3_account_type_spinner"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:checked="true"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/label_step3_account_feature"
+                android:textColor="@color/bpblack"
+                android:layout_below="@id/step3_joint_radio_button"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:text="@string/label_step3_acc_feature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:id="@+id/radio_step3_cash"
+                android:layout_below="@id/label_step3_account_feature"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:checked="true"
+                android:text="@string/radio_cash_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/question_mark_step3_cash"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignTop="@id/radio_step3_cash"
+                android:layout_toEndOf="@id/radio_step3_cash"
+                android:layout_marginStart="30dp"
+                android:background="@drawable/custom_round_button"
+                android:textColor="@color/bpWhite"
+                android:text="@string/question_mark" />
+            <RadioButton
+                android:id="@+id/radio_step3_margin"
+                android:layout_below="@id/radio_step3_cash"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:text="@string/radio_margin_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/step3_margin_notice"
+                android:layout_below="@id/radio_step3_margin"
+                android:textColor="@color/action_mode_background"
+                android:padding="@dimen/open_account_note_margin"
+                android:text="@string/label_step3_margin_notice"
+                android:textSize="@dimen/calendar_text_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/question_mark_step3_margin"
+                android:layout_alignTop="@id/radio_step3_margin"
+                android:layout_alignEnd="@id/question_mark_step3_cash"
+                android:background="@drawable/custom_round_button"
+                android:text="@string/question_mark"
+                android:textColor="@color/bpWhite"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+
+            <LinearLayout
+                android:id="@+id/step3_margin_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/step3_margin_notice"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <com.example.util.textViewSpinner
+                    android:id="@+id/step3_transaction_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_white_background"
+                    android:hint="@string/label_step3_size_of_transaction"
+                    android:textAlignment="center"
+                    android:textColor="@color/bpblack" />
+
+                <EditText
+                    android:id="@+id/step3_stock_investing_year"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/open_account_margins"
+                    android:digits="@string/digits_only_numbers"
+                    android:maxLength="2"
+                    android:hint="@string/label_step3_year_of_investing_stock"
+                    android:background="@drawable/custom_white_background"
+                    android:inputType="number"
+                    android:textAlignment="center" />
+                <com.example.util.textViewSpinner
+                    android:id="@+id/step3_average_stock_trade"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/open_account_margins"
+                    android:background="@drawable/custom_white_background"
+                    android:hint="@string/label_step3_avg_stock_trade"
+                    android:textAlignment="center"
+                    android:textColor="@color/bpblack" />
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/cbox_step3_option_trade"
+                android:layout_below="@id/step3_margin_view"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:text="@string/label_step3_option_trading"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/question_mark_step3_option_trading"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignTop="@id/cbox_step3_option_trade"
+                android:layout_alignEnd="@+id/question_mark_step3_cash"
+                android:background="@drawable/custom_round_button"
+                android:textColor="@color/bpWhite"
+                android:text="@string/question_mark" />
+
+            <LinearLayout
+                android:id="@+id/step3_option_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cbox_step3_option_trade"
+                android:layout_marginTop="@dimen/open_account_margins"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.example.util.textViewSpinner
+                        android:id="@+id/step3_option_level_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/custom_white_background"
+                        android:hint="@string/label_step3_option_level"
+                        android:textAlignment="center"
+                        android:textColor="@color/bpblack"
+                        android:visibility="visible" />
+
+                    <Button
+                        android:id="@+id/question_mark_step3_option_level"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="@dimen/open_account_margins"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/custom_round_button"
+                        android:textColor="@color/bpWhite"
+                        android:text="@string/question_mark" />
+                </RelativeLayout>
+
+                <com.example.util.textViewSpinner
+                    android:id="@+id/step3_option_transaction_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/open_account_margins"
+                    android:background="@drawable/custom_white_background"
+                    android:entries="@array/size_of_transaction"
+                    android:hint="@string/label_step3_size_of_option_transaction"
+                    android:textAlignment="center"
+                    android:textColor="@color/bpblack" />
+
+                <EditText
+                    android:id="@+id/step3_option_investing_year"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/open_account_margins"
+                    android:background="@drawable/custom_white_background"
+                    android:hint="@string/label_step3_year_of_investing_option"
+                    android:inputType="number"
+                    android:textAlignment="center" />
+
+                <com.example.util.textViewSpinner
+                    android:id="@+id/step3_average_option_trade"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/open_account_margins"
+                    android:background="@drawable/custom_white_background"
+                    android:entries="@array/number_trades_year"
+                    android:hint="@string/label_step3_avg_option_trade"
+                    android:textAlignment="center"
+                    android:textColor="@color/bpblack" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

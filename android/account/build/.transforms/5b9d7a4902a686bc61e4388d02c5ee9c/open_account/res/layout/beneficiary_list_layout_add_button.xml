@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/transparent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/beneficiary_list_add_button"
+        android:background="@drawable/custom_toggle_button_white_background"
+        android:text="@string/add_new_beneficiary"
+        android:textAlignment="center"
+        android:textColor="@color/bpblack"
+        android:textAllCaps="false"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
