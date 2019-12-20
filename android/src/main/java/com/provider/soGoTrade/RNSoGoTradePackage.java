@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class RNSogoTradePackage implements ReactPackage{
+public class RNSoGoTradePackage implements ReactPackage{
 
     @Override
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
@@ -21,7 +21,7 @@ public class RNSogoTradePackage implements ReactPackage{
     public List<NativeModule> createNativeModules(
         ReactApplicationContext reactContext) {
         List<NativeModule> modules = new ArrayList<>();
-        modules.add(new RNSogoTradeModule(reactContext));
+        modules.add(new com.provider.sogotrade.RNSogoTradeModule(reactContext));
         return modules;
     }
 }

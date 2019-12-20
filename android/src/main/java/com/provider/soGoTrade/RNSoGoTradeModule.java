@@ -34,7 +34,7 @@ import com.facebook.react.bridge.ReactContext;
 import com.example.ui.open_account.Step1;
 import com.example.ui.open_account.models.OpenAccountModel;
 
-public class RNSogoTradeModule extends ReactContextBaseJavaModule {
+class RNSogoTradeModule extends ReactContextBaseJavaModule {
 
   private static ReactApplicationContext reactContext;
 
@@ -57,7 +57,7 @@ public class RNSogoTradeModule extends ReactContextBaseJavaModule {
       final Activity activity = getCurrentActivity();
       Intent intent = new Intent(activity, Step1.class);
       OpenAccountModel.getModel().setOpenAccountURL("https://applyqa.sogotrade.com/");
-      OpenAccountModel.getModel().setAuthorities("com.example.provider");
+      //OpenAccountModel.getModel().setAuthorities("com.example.provider");
       activity.startActivity(intent);
     }catch(Exception e){
       Log.e("Exce", String.valueOf(e));
